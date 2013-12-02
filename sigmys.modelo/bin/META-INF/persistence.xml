@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence     http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+
+	<persistence-unit name="sistema-persistence"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	
+		<class>com.sinergia.modelo.data.seguridad.Usuario</class>
+		<class>com.sinergia.modelo.data.seguridad.Transaccion</class>
+		<class>com.sinergia.modelo.data.seguridad.TipoTransaccion</class>
+		<class>com.sinergia.modelo.data.seguridad.TipoEvento</class>
+		<class>com.sinergia.modelo.data.seguridad.TipoDespliegue</class>
+		<class>com.sinergia.modelo.data.seguridad.Sistema</class>
+		<class>com.sinergia.modelo.data.seguridad.Rol</class>
+		<class>com.sinergia.modelo.data.seguridad.Operacion</class>
+		<class>com.sinergia.modelo.data.seguridad.Grupo</class>
+		<class>com.sinergia.modelo.data.seguridad.CarpetaTransaccion</class>
+		<class>com.sinergia.modelo.data.seguridad.Bitacora</class>
+		<class>com.sinergia.modelo.data.general.Archivo</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.UnidadOrdenEntrega</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.SolicitudMaterial</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.Requisicion</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.ProyectoProgramacionAnual</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.ProgramacionAnual</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.OrdenServicio</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.OrdenEntrega</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.ObservacionEntrega</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.MaterialSolicitado</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.MaterialRequerido</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.MaterialRecibido</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.MaterialProgramado</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.MaterialOrdenEntrega</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.EntregaEventual</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.DetalleUnidadEntregaEventual</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.transacciones.DetalleMaterialEntregaEventual</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.UnidadOrganizativa</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.TipoRequisicion</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.TipoObservacion</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.TipoMaterial</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.ReferenciaObservacion</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.Proyecto</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.Proveedor</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.OrigenCompra</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.Noticia</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.Motivo</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.Medida</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.Material</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.EstadoRequisicion</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.EstadoProgramacionAnual</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.EstadoMaterialSolicitado</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.EstadoMaterialRequerido</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.EspacioFisico</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.EnlaceInteres</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.Empleado</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.ClasificacionObservacion</class>
+		<class>org.edu.ucla.dcyt.redwood.sigmys.modelo.data.maestros.EspacioFisicoUnidadO</class>
+		
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+
+			<!-- Solo para debug. Comentar para ambientes de ProducciÃƒÂ³n -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.jdbc.use_streams_for_binary"
+				value="true" />
+
+			<!-- <property name="hibernate.cache.provider_class" value="net.sf.ehcache.hibernate.SingletonEhCacheProvider"/> 
+				<property name="hibernate.cache.use_query_cache" value="true"/> <property 
+				name="hibernate.cache.use_second_level_cache" value="true"/> <property name="hibernate.generate_statistics" 
+				value="true"/> -->
+
+			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider" />
+
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
+			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider" />
+
+		</properties>
+	</persistence-unit>
+
+</persistence>
